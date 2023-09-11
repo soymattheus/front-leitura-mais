@@ -1,0 +1,25 @@
+{
+    "container": {
+        "flex": 1,
+        "backgroundColor": "#E1DCD9",
+        "alignItems": "center",
+        "justifyContent": "center"
+      },
+    "colors": {
+        "ligthTheme": {
+            "background": "#E1DCD9",
+            "primary": "#32435F",
+            "contorno": "#37616D",
+            "button": "#78AEAE",
+            "orange": "#C79A73"
+        }
+    },
+    "font": {
+        "fontWeight": {
+            "bold": 700,
+            "semiBold": 600,
+            "medium": 500,
+            "regular": 400
+        }
+    }
+}
