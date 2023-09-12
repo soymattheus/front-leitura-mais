@@ -1,12 +1,14 @@
 import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native';
 
+import BigButton from '../../components/buttons/BigButton';
+
 const img = require('../../assets/logo.png')
 const Styles = require('../../global/style.json')
 
 export default function InitialPage({navigation,route}) {
 
   return (
-    <View style={Styles.container}>
+    <View style={Styles.containerCenter}>
       <Image
         source={img}
         style={{width: 282, height: 250}}
@@ -42,52 +44,15 @@ export default function InitialPage({navigation,route}) {
         para ler e aprender
       </Text>
 
-      <TouchableOpacity
-        onPress={() => navigation.navigate('Tabg')}
-        style={{
-          height:50, 
-          width: 295,
-          backgroundColor: Styles.colors.ligthTheme.button,
-          alignItems: "center",
-          justifyContent: "center",
-          borderRadius: 10,
-          marginTop: 10,
-          marginBottom: 15
-        }}  
-      >
-        <Text
-          style={{
-            color: "#fff",
-            fontSize: 20,
-            fontWeight: Styles.font.fontWeight.semiBold
-          }}
-        >
-          ENTRAR
-        </Text>
-      </TouchableOpacity>
+      <BigButton
+        text='ENTRAR'
+        onPress={() => navigation.navigate('Login')}
+      />
 
-      <TouchableOpacity
-        style={{
-          height:50, 
-          width: 295,
-          backgroundColor: Styles.colors.ligthTheme.button,
-          alignItems: "center",
-          justifyContent: "center",
-          borderRadius: 10,
-          marginTop: 10,
-          marginBottom: 15
-        }} 
-      >
-        <Text
-          style={{
-            color: "#fff",
-            fontSize: 20,
-            fontWeight: Styles.font.fontWeight.semiBold
-          }}
-        >
-          CADASTRAR-SE
-        </Text>
-      </TouchableOpacity>
+      <BigButton
+        text='CADASTRAR-SE'
+        onPress={() => navigation.navigate('SignInAccountData')}
+      />
 
       <View style={{flexDirection: 'row', alignItems: 'center', width: 295, marginTop: 25, marginBottom: 25}}>
         <View style={{flex: 1, height: 1, backgroundColor: 'black'}} />

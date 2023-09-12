@@ -1,26 +1,13 @@
 import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
-import MyTabs from '../../navigation/tab.routes'
+import Styles from '../../global/style.json'
 
 export default function BooksList() {
-    return (
-      <View style={styles.container}>
-        <Text>Lista de Livros</Text>
-  
-        <TouchableOpacity>
-          <Text>ENTRAR</Text>
-        </TouchableOpacity>
-      </View>
-  
-    );
-  }
+  return (
+    <View style={Styles.container}>
+      <Text>Lista de Livros</Text>
+    </View>
 
-  
-  const styles = StyleSheet.create({
-    container: {
-      flex: 1,
-      backgroundColor: '#fff',
-      alignItems: 'center',
-      justifyContent: 'center',
-    },
-  });
+  );
+}

@@ -1,11 +1,13 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import { LinearGradient } from 'expo-linear-gradient';
+
+import Styles from '../global/style.json'
 
 import Books from '../screens/Books';
 import Search from '../screens/Search'
 import Groups from '../screens/Groups'
 import Profile from '../screens/Profile'
-import { ProfileStackNavigator, BookStackNavigator } from './stack.routes';
 
 const Tab = createBottomTabNavigator();
 
@@ -14,8 +16,12 @@ export default function TabRoutes() {
     <Tab.Navigator
         initialRouteName="Home"
         screenOptions={{
-        tabBarActiveTintColor: '#e91e63',
-        headerShown: false
+          tabBarActiveTintColor: '#e91e63',
+          headerShown: false,
+          tabBarStyle: {
+            paddingHorizontal: 15,
+            backgroundColor: Styles.colors.ligthTheme.background,
+          },
         }}
     >
       <Tab.Screen 
@@ -25,7 +31,7 @@ export default function TabRoutes() {
             tabBarLabel: 'Livros',
             tabBarShowLabel: false,
             tabBarIcon: ({ color, size }) => (
-                <MaterialCommunityIcons name="book-open-outline" color={"#32435F"} size={35} />
+                <MaterialCommunityIcons name="book-open-variant" color={"#32435F"} size={35} />
             ),
         }}
       />

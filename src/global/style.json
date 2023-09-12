@@ -1,7 +1,16 @@
 {
-    "container": {
+    "containerCenter": {
         "flex": 1,
         "backgroundColor": "#E1DCD9",
+        "alignItems": "center",
+        "justifyContent": "center"
+      },
+      "container": {
+        "flex": 1,
+        "backgroundColor": "#E1DCD9",
+        "alignItems": "center"
+      },
+      "item": {
         "alignItems": "center",
         "justifyContent": "center"
       },
@@ -11,7 +20,10 @@
             "primary": "#32435F",
             "contorno": "#37616D",
             "button": "#78AEAE",
-            "orange": "#C79A73"
+            "orange": "#C79A73",
+            "blue": "#252a34",
+            "Thatch": "rgba(166, 127, 120, 0.1)",
+            "opaqueText": "rgba(37, 42, 52, 0.7)"
         }
     },
     "font": {
@@ -21,5 +33,20 @@
             "medium": 500,
             "regular": 400
         }
+    },
+    "text": {
+      "titleMain": {
+        "fontSize": 32,
+        "fontWeight": 700
+      },
+      "subtitle": {
+        "fontSize": 18,
+        "fontWeight": 700
+      }
+      ,
+      "titleHeader": {
+        "fontSize": 18,
+        "fontWeight": 700
+      }
     }
 }
